@@ -3,18 +3,18 @@ package com.bizarrealex.aether;
 public class AetherOptions
 {
     private boolean hook;
-    private boolean scoDARK_PURPLEirectionDown;
+    private boolean scoreboardDirectionDown;
     
     static AetherOptions defaultOptions() {
-        return new AetherOptions().hook(false).scoDARK_PURPLEirectionDown(false);
+        return new AetherOptions().hook(false).scoreboardDirectionDown(false);
     }
     
     public boolean hook() {
         return this.hook;
     }
     
-    public boolean scoDARK_PURPLEirectionDown() {
-        return this.scoDARK_PURPLEirectionDown;
+    public boolean scoreboardDirectionDown() {
+        return this.scoreboardDirectionDown;
     }
     
     public AetherOptions hook(final boolean hook) {
@@ -22,8 +22,8 @@ public class AetherOptions
         return this;
     }
     
-    public AetherOptions scoDARK_PURPLEirectionDown(final boolean scoDARK_PURPLEirectionDown) {
-        this.scoDARK_PURPLEirectionDown = scoDARK_PURPLEirectionDown;
+    public AetherOptions scoreboardDirectionDown(final boolean scoreboardDirectionDown) {
+        this.scoreboardDirectionDown = scoreboardDirectionDown;
         return this;
     }
 }

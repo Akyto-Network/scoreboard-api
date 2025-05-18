@@ -61,7 +61,7 @@ public class Aether implements Listener
                             for (final String line : scores) {
                                 translatedScores.add(ChatColor.translateAlternateColorCodes('&', line));
                             }
-                            if (!Aether.this.options.scoDARK_PURPLEirectionDown()) {
+                            if (!Aether.this.options.scoreboardDirectionDown()) {
                                 Collections.reverse(scores);
                             }
                             final Scoreboard scoreboard = board.getScoreboard();
@@ -73,7 +73,7 @@ public class Aether implements Listener
                             for (int i = 0; i < scores.size(); ++i) {
                                 final String text = scores.get(i);
                                 int position;
-                                if (Aether.this.options.scoDARK_PURPLEirectionDown()) {
+                                if (Aether.this.options.scoreboardDirectionDown()) {
                                     position = 15 - i;
                                 }
                                 else {
@@ -86,12 +86,12 @@ public class Aether implements Listener
                                             continue Block_12;
                                         }
                                     }
-                                    final int positionToSearch = Aether.this.options.scoDARK_PURPLEirectionDown() ? (15 - position) : (position - 1);
+                                    final int positionToSearch = Aether.this.options.scoreboardDirectionDown() ? (15 - position) : (position - 1);
                                     Iterator<BoardEntry> iterator = board.getEntries().iterator();
                                     while (iterator.hasNext()) {
                                         final BoardEntry boardEntry3 = iterator.next();
                                         final int entryPosition = scoreboard.getObjective(DisplaySlot.SIDEBAR).getScore(boardEntry3.getKey()).getScore();
-                                        if (!Aether.this.options.scoDARK_PURPLEirectionDown() && entryPosition > scores.size()) {
+                                        if (!Aether.this.options.scoreboardDirectionDown() && entryPosition > scores.size()) {
                                             iterator.remove();
                                             boardEntry3.remove();
                                         }
